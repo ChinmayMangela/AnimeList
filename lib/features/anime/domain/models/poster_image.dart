@@ -12,4 +12,14 @@ class PosterImage {
     required this.medium,
     required this.original,
   });
+
+  factory PosterImage.fromJson(Map<String, dynamic> json) {
+    return PosterImage(
+      tiny: json['tiny'],
+      large: json['large'],
+      small: json['small'],
+      medium: json['medium'],
+      original: json['original'],
+    );
+  }
 }

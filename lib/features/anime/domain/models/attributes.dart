@@ -20,4 +20,18 @@ class Attributes {
     required this.coverImage,
     required this.titles,
   });
+
+  factory Attributes.fromJson(Map<String, dynamic> json) {
+    return Attributes(
+      synopsis: json['synopsis'],
+      createdAt: json['createdAt'],
+      description: json['description'],
+      averageRating: json['averageRating'],
+      posterImage: PosterImage.fromJson(json['posterImage']),
+      coverImage: CoverImage.fromJson(json['coverImage']),
+      titles: Titles.fromJson(
+        json['titles'],
+      ),
+    );
+  }
 }

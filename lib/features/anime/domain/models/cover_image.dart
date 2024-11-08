@@ -1,4 +1,3 @@
-
 class CoverImage {
   final String tiny;
   final String large;
@@ -11,4 +10,13 @@ class CoverImage {
     required this.small,
     required this.original,
   });
+
+  factory CoverImage.fromJson(Map<String, dynamic> json) {
+    return CoverImage(
+      tiny: json['tiny'],
+      large: json['large'],
+      small: json['small'],
+      original: json['original'],
+    );
+  }
 }
