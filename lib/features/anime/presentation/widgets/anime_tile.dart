@@ -30,7 +30,7 @@ class AnimeTile extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   anime.attributes.titles.englishTitle,
-                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
                   overflow: TextOverflow.ellipsis,
@@ -38,7 +38,8 @@ class AnimeTile extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   anime.attributes.description,
-                  style: Theme.of(context).textTheme.bodySmall,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                  maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
               ],
@@ -58,7 +59,7 @@ class AnimeTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
       ),
       child: Image.network(
-        anime.attributes.coverImage.tiny,
+        anime.attributes.posterImage.tiny,
         fit: BoxFit.cover,
       ),
     );
