@@ -7,7 +7,7 @@ class Titles {
 
   factory Titles.fromJson(Map<String, dynamic> json) {
     return Titles(
-      englishTitle: json['en'],
+      englishTitle: json['en'] ?? '',
     );
   }
 }

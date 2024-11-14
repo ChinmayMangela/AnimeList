@@ -6,7 +6,7 @@ class Attributes {
   final String synopsis;
   final DateTime createdAt;
   final String description;
-  final String averageRating;
+  final double averageRating;
   final PosterImage posterImage;
   final CoverImage coverImage;
   final Titles titles;
@@ -23,10 +23,12 @@ class Attributes {
 
   factory Attributes.fromJson(Map<String, dynamic> json) {
     return Attributes(
-      synopsis: json['synopsis'],
-      createdAt: json['createdAt'],
-      description: json['description'],
-      averageRating: json['averageRating'],
+      synopsis: json['synopsis'] ?? '',
+      createdAt: DateTime.parse(json['createdAt'] ?? DateTime.now()),
+      description: json['description'] ?? '',
+      averageRating: json['averageRating'] is String
+          ? double.parse(json['averageRating'] ?? '')  // Parse the rating as a double
+          : json['averageRating'].toDouble() ?? 0.0,
       posterImage: PosterImage.fromJson(json['posterImage']),
       coverImage: CoverImage.fromJson(json['coverImage']),
       titles: Titles.fromJson(
