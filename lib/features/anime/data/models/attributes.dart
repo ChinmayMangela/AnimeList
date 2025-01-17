@@ -1,5 +1,5 @@
-import 'package:anime_list/features/anime/domain/models/poster_image.dart';
-import 'package:anime_list/features/anime/domain/models/titles.dart';
+import 'package:anime_list/features/anime/data/models/poster_image.dart';
+import 'package:anime_list/features/anime/data/models/titles.dart';
 import 'cover_image.dart';
 
 class Attributes {

@@ -1,5 +1,6 @@
-import 'package:anime_list/features/anime/domain/models/anime.dart';
 import 'package:flutter/material.dart';
+
+import '../../data/models/anime.dart';
 
 class AnimeTile extends StatelessWidget {
   const AnimeTile({

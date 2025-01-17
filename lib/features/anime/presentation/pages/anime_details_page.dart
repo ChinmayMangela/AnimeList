@@ -1,6 +1,7 @@
-import 'package:anime_list/features/anime/domain/models/anime.dart';
 import 'package:anime_list/utils/utils.dart';
 import 'package:flutter/material.dart';
+
+import '../../data/models/anime.dart';
 
 class AnimeDetailsPage extends StatelessWidget {
   const AnimeDetailsPage({

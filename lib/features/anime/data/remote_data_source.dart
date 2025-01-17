@@ -1,7 +1,8 @@
 import 'dart:convert';
 
-import 'package:anime_list/features/anime/domain/models/anime.dart';
 import 'package:http/http.dart' as http;
+
+import 'models/anime.dart';
 
 class RemoteDataSource {
   final http.Client client;

@@ -1,4 +1,5 @@
-import 'package:anime_list/features/anime/domain/models/attributes.dart';
+
+import 'attributes.dart';
 
 class Anime {
   final Attributes attributes;
